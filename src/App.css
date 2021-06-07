@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
+
+:root {
+  --dark-blue:  #2A4CA6;
+  --light-blue: #0179DA;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-container {
+  font-family: Arial, Helvetica, sans-serif;
   display: flex;
-  flex-direction: column;
+  height: 100vh;
+}
+
+.main-container .log-bar {
+  background-color: var(--light-blue);
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  color: white;
+  padding-top: 15px;
+}
+
+.log-bar .log-title {
+  font-size: 20px;
+  font-weight: 600;
+  padding-left: 20px;
+}
+
+.log-bar .user-n-logout {
+  display: flex;
+  width: auto;
+}
+
+.log-bar .user-n-logout p {
+  margin-right: 15px;
+}
+
+.main-container .nav-bar {
+  background-color: var(--dark-blue);
+  padding: 50px 0;
+}
+
+.nav-bar ul {
+  list-style-type: none;
+  padding: 0;
+  width: max-content;
+}
+
+.nav-bar ul li {
+  height: 50px;
+  padding: 0 35px;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.nav-bar ul li:hover {
+  background-color: var(--light-blue);
+}
+
+.nav-bar ul li a {
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav-bar ul li a:visited {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.main-container div {
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main-container .section-container {
+  padding: 15px 40px 15px 40px;
+  margin: 0 auto;
+  width: auto;
+}
+
+.section-container .section-title {
+  color: var(--dark-blue);
+  border-bottom: 1px solid black;
+  padding: 0 0 10px 20px;
+  font-weight: 100;
+}
+
+.section-container .search-container {
+  margin: 10px 0;
+}
+
+.section-container .search-container .search {
+  height: 38px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.section-container .show-details {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
